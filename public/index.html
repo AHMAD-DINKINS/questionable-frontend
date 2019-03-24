@@ -24,25 +24,44 @@
     -->
     <title>Questionable</title>
     <style>
+        #root {
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            overflow: hidden;
+            position: fixed;
+            background: #eee;
+        }
         #editor {
-            height: 200px;
+            width: auto;
+            height: 250px;
+            border: 2px solid #ddd;
+            box-shadow: 0 2px 3px #aaa;
+            padding: 32px;
         }
     </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.3/ace.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.3/ext-language_tools.js"></script>
     <div id="root">
         <div id="app"></div>
-        <div id="editor">public static void main(String[] args) {
-    //Code goes here
-}
-        </div>
+        <div id="editor"></div>
     </div>
     <script type="text/javascript">
+        ace.require("ace/ext/language_tools");
         let editor = ace.edit("editor");
-        editor.getSession().setMode("ace/mode/java");
-        editor.setTheme("ace/theme/github");
+
+        editor.session.setMode("ace/mode/java");
+        editor.setTheme("ace/theme/tomorrow");
+        editor.setOptions({
+            enableBasicAutocompletion: true,
+            enableLiveAutocompletion: true,
+            enableSnippets: false
+        });
+        editor.setValue("public static void main(String[] args) {\n\t//Code goes here\n}");
     </script>
     <!--
       This HTML file is a template.
