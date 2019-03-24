@@ -8,7 +8,10 @@ class App extends Component {
     }
 
     submissionHandler = submission => {
+        //submission will be value of editor
         console.log("Submission: " + submission);
+        //use splice array method
+        //set submission key to some calc involving student id, name, and the submission number (think hashCode())
         //query server for submission result
         //update app state
     }
