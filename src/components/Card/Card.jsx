@@ -1,9 +1,9 @@
 import React from "react";
-import "./Card.css";
+import "./Card.module.css";
 
 const Card = props => (
     <div className="Card">
     </div>
 );
 
-export default card;
+export default Card;
