@@ -31,7 +31,6 @@
             bottom: 0;
             overflow: hidden;
             position: relative;
-            background: #ccc;
         }
         #editor {
             width: auto;
@@ -40,6 +39,7 @@
             box-shadow: 0 2px 3px #888;
         }
     </style>
+    <style src="index.css"></style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -48,13 +48,19 @@
     <div id="root">
         <div id="app-head"></div>
         <div id="editor"></div>
+        <input id="editor-input" style="display: none;"></input>
         <div id="app-foot"></div>
     </div>
-    <script type="text/javascript">
+    <script>
         ace.require("ace/ext/language_tools");
-        let editor = ace.edit("editor");
 
-        editor.session.setMode("ace/mode/java");
+        var editor = ace.edit('editor');
+        var input = document.getElementById('editor-input');
+        
+        editor.getSession().setMode("ace/mode/java");
+        editor.getSession().on("change", () => {
+          input.textContent = editor.getSession().getValue();
+        });
         editor.setTheme("ace/theme/tomorrow");
         editor.setOptions({
             enableBasicAutocompletion: true,

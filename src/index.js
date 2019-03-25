@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import AppFoot from './App/AppFoot.jsx';
+import AppFoot from './containers/AppFoot.jsx';
 
 ReactDOM.render(<AppFoot />, document.getElementById('app-foot'));
 

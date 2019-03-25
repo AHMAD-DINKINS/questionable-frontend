@@ -2,10 +2,29 @@
     clear:both;
     width: 90%;
     height: auto;
-    margin: 8px auto;
+    margin: .7em auto;
     border: 2px solid #aaa;
-    box-shadow: 0 20px 30px #888;
-    padding: 8px;
+    box-shadow: 0 4px 15px #888;
+    padding: .3em;
     text-align: center;
     background-color: #eee;
+}
+
+.Toggled {
+    width: 20px;
+    height: 100px;
+    position: relative;
+    background: black;
+    display: inline-block;
+}
+
+.Toggled:after {
+    background: black;
+    content: "";
+    height: 20px;
+    left: -40px;
+    position: absolute;
+    top: 40px;
+    width: 100px;
+    display: inline-block;
 }

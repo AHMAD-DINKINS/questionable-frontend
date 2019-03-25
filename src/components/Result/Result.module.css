@@ -1,3 +1,49 @@
 .Result {
-    text-align: center;
+    text-align:center;
+}
+
+.Result button {
+    background:#2C75FF;
+    color:#fff;
+    border-left: 5px solid #2C75FF;
+    border-right: 5px solid #2C75FF;
+    border-top:none;
+    border-bottom:none;
+    margin: .5em;
+    float:right;
+    position:relative;
+    height:60px;
+    font-size:1.6em;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    
+}
+
+.Result button:hover {
+    background:#fff;
+    color:#2C75FF;
+}
+
+.Result button:before, button:after {
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:5px;
+    width:0;
+    background: #2C75FF;
+    transition:400ms ease all;
+}
+
+.Result button:after {
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+}
+
+.Result button:hover:before, button:hover:after {
+    width:100%;
+    transition:800ms ease all;
 }
