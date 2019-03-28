@@ -61,10 +61,10 @@
         editor.getSession().on("change", () => {
           input.textContent = editor.getSession().getValue();
         });
-        editor.setTheme("ace/theme/tomorrow");
         editor.setOptions({
             enableBasicAutocompletion: true,
             enableLiveAutocompletion: true,
+            theme: 'ace/theme/chrome',
             enableSnippets: false
         });
         editor.setValue("public static void main(String[] args) {\n\t//Code goes here\n}");

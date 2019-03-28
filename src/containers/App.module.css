@@ -1,4 +1,26 @@
 .AppFoot {
   text-align: center;
-  background-color: #333;
+  width: auto;
+  background: #333;
+  /*padding: 20px;
+  transition: margin-left .5s; Add this if you wasnt to push page content to the right*/
 }
+
+.AppHead button.Open {
+  top: 50%;
+  left: 0;
+  position: absolute;
+}
+
+.AppHead button.Open:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.AppHead button.Close {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  font-size: 36px;
+}
+

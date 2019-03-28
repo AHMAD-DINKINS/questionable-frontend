@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from './App.module.css';
+import footStyles from './App.module.css';
 import Result from '../components/Result/Result.jsx';
 
 export default class AppFoot extends Component {
@@ -50,7 +50,7 @@ export default class AppFoot extends Component {
     };
 
     render = () => (
-        <div className={styles.App_Foot}>
+        <div className={footStyles.App_Foot}>
             <Result
             grade={this.submissionHandler}
                 submissions={this.state.submissions}
